@@ -1,0 +1,159 @@
+@import url(normalize.css);
+@import url(animate.css);
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #313131; }
+
+.container {
+  zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .container:before, .container:after {
+    content: "";
+    display: table; }
+  .container:after {
+    clear: both; }
+
+.padding {
+  padding: 0 20px; }
+
+#header {
+  padding: 75px 0;
+  background-image: -webkit-linear-gradient(top, #01a388, #027764);
+  background-image: -moz-linear-gradient(top, #01a388, #027764);
+  background-image: -ms-linear-gradient(top, #01a388, #027764);
+  background-image: -o-linear-gradient(top, #01a388, #027764);
+  background-image: linear-gradient(top, #01a388, #027764);
+  -webkit-box-shadow: 50px 50px 25px red;
+  box-shadow: 50px 50px 25px red; }
+  #header h1 {
+    color: white;
+    font-family: "AllerDisplay-Regular";
+    font-size: 48px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase; }
+  #header small {
+    color: #89efde;
+    font-family: "Aller-Regular";
+    font-size: 16px;
+    margin: 0; }
+    #header small a {
+      color: #cafdf5; }
+  #header form {
+    margin-top: 50px; }
+    #header form input[type="text"] {
+      background: white;
+      border: none;
+      border-radius: 3px;
+      display: inline-block;
+      font-family: "Aller-Regular";
+      font-size: 14px;
+      height: 40px;
+      padding: 8px 12px;
+      line-height: 24px;
+      width: 60%;
+      -webkit-box-shadow: 0 -1px 0 #035447;
+      box-shadow: 0 -1px 0 #035447; }
+    #header form input[type="submit"] {
+      border: 1px solid #046da1;
+      border-radius: 3px;
+      color: white;
+      display: inline-block;
+      font-family: "AllerDisplay-Regular";
+      font-size: 16px;
+      line-height: 40px;
+      padding: 0 20px;
+      text-shadow: 0 -1px 0 #075177;
+      text-transform: uppercase;
+      background-image: -webkit-linear-gradient(top, #14a0e5, #0088cc);
+      background-image: -moz-linear-gradient(top, #14a0e5, #0088cc);
+      background-image: -ms-linear-gradient(top, #14a0e5, #0088cc);
+      background-image: -o-linear-gradient(top, #14a0e5, #0088cc);
+      background-image: linear-gradient(top, #14a0e5, #0088cc);
+      -webkit-box-shadow: inset 0 1px 0 #5ac0f3;
+      box-shadow: inset 0 1px 0 #5ac0f3; }
+
+#result {
+  background: #222222;
+  border-bottom: 1px solid #414141;
+  padding: 25px 0 50px;
+  position: relative; }
+  #result h2 {
+    color: #606060;
+    font-family: "AllerDisplay-Regular";
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase; }
+  #result .weetje {
+    color: #eeeeee;
+    font-family: "SkolarWeb-Italic";
+    font-size: 24px;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    width: 100%;
+    z-index: 1; }
+
+#smartphone {
+  max-width: 240px;
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  #smartphone:last-child {
+    margin-right: 0; }
+
+#tablet {
+  max-width: 320px;
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  #tablet:last-child {
+    margin-right: 0; }
+
+#pc {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  #pc:last-child {
+    margin-right: 0; }
+
+@media screen and (max-width: 768px) {
+  #smartphone, #tablet, #pc {
+    display: block;
+    float: left;
+    margin-right: 3.57866%;
+    width: 100%; }
+    #smartphone:last-child, #tablet:last-child, #pc:last-child {
+      margin-right: 0; } }
+
+iframe {
+  background: white;
+  border: none;
+  height: 560px;
+  width: 200%;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0; }
+
+.frame {
+  height: 280px;
+  overflow: hidden;
+  width: 100%; }

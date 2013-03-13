@@ -1,0 +1,129 @@
+@import bourbon/bourbon
+@import neat/neat
+@import normalize.css
+@import animate.css
+
+$tablet: max-width 768px 8
+$mobile: max-width 480px 4
+
+body
+  background: #313131
+
+// Grid
+
+.container
+  @include outer-container
+
+.padding
+  padding: 0 20px
+
+// Header
+
+#header
+  padding: 75px 0
+  @include background-image(linear-gradient(top, #01a388, #027764))
+  @include box-shadow(50px 50px 25px #f00)
+
+  h1
+    color: #fff
+    font-family: "AllerDisplay-Regular"
+    font-size: 48px
+    font-weight: normal
+    margin: 0
+    text-transform: uppercase
+
+  small
+    color: #89efde
+    font-family: "Aller-Regular"
+    font-size: 16px
+    margin: 0
+
+    a
+      color: #cafdf5
+
+  form
+    margin-top: 50px
+
+    input[type="text"]
+      background: #fff
+      border: none
+      border-radius: 3px
+      display: inline-block
+      font-family: "Aller-Regular"
+      font-size: 14px
+      height: 40px
+      padding: 8px 12px
+      line-height: 24px
+      width: 60%
+      @include box-shadow(0 -1px 0 #035447)
+
+    input[type="submit"]
+      border: 1px solid #046da1
+      border-radius: 3px
+      color: #fff
+      display: inline-block
+      font-family: "AllerDisplay-Regular"
+      font-size: 16px
+      line-height: 40px
+      padding: 0 20px
+      text-shadow: 0 -1px 0 #075177
+      text-transform: uppercase
+      @include background-image(linear-gradient(top, #14a0e5, #0088cc))
+      @include box-shadow(inset 0 1px 0 #5ac0f3)
+
+// Result
+
+#result
+  background: #222
+  border-bottom: 1px solid #414141
+  padding: 25px 0 50px
+  position: relative
+
+  h2
+    color: #606060
+    font-family: "AllerDisplay-Regular"
+    font-size: 18px
+    font-weight: normal
+    text-align: center
+    text-transform: uppercase
+
+  .weetje
+    color: #eee
+    font-family: "SkolarWeb-Italic"
+    font-size: 24px
+    opacity: 0
+    position: absolute
+    text-align: center
+    top: 40%
+    width: 100%
+    z-index: 1
+
+#smartphone
+  max-width: 240px
+  @include span-columns(2)
+
+#tablet
+  max-width: 320px
+  @include span-columns(4)
+
+#pc
+  @include span-columns(6)
+
+#smartphone, #tablet, #pc
+  @include media($tablet)
+    @include span-columns(8)
+
+iframe
+  background: #fff
+  border: none
+  height: 560px
+  width: 200%
+  @include transform(scale(.5))
+  @include transform-origin(0 0)
+
+.frame
+  height: 280px
+  overflow: hidden
+  width: 100%
+
+// Styles
