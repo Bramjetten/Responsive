@@ -28,9 +28,7 @@ body {
   background-image: -moz-linear-gradient(top, #01a388, #027764);
   background-image: -ms-linear-gradient(top, #01a388, #027764);
   background-image: -o-linear-gradient(top, #01a388, #027764);
-  background-image: linear-gradient(top, #01a388, #027764);
-  -webkit-box-shadow: 50px 50px 25px red;
-  box-shadow: 50px 50px 25px red; }
+  background-image: linear-gradient(top, #01a388, #027764); }
   #header h1 {
     color: white;
     font-family: "AllerDisplay-Regular";
@@ -78,6 +76,8 @@ body {
       background-image: linear-gradient(top, #14a0e5, #0088cc);
       -webkit-box-shadow: inset 0 1px 0 #5ac0f3;
       box-shadow: inset 0 1px 0 #5ac0f3; }
+      #header form input[type="submit"].disabled {
+        background: #0088cc; }
 
 #result {
   background: #222222;

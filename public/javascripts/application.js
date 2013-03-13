@@ -1,15 +1,23 @@
 jQuery(document).ready(function() {
 
   $('form#form').submit(function(e) {
-    $('#smartphone, #tablet, #pc').animate({
-      opacity: 0.0
+    var submitButton = $(this).find('input[type="submit"]')
+    submitButton.attr("disabled", "disabled");
+    submitButton.addClass('disabled');
+    submitButton.attr("value", "Testen...")
 
+    $('#smartphone, #tablet, #pc').animate({
+      opacity: 0
     }, 400, function() {
       $('.weetje').removeClass('bounceOutLeft');
       $('.weetje').addClass('bounceInRight');
       $('.weetje').css({opacity: 1});
 
-      var url = $('form').find('input').val();
+      var url = encodeURI($('form').find('input').val());
+      if(!url.match(/^http:\/\//)) {
+        url = "http://" + url;
+      }
+
       $('iframe').attr("src", url);
 
       setTimeout(function() {
@@ -19,7 +27,11 @@ jQuery(document).ready(function() {
           $('#smartphone, #tablet, #pc').animate({
             opacity: 1
           }, 400);
-        }, 400)
+        }, 400);
+
+        submitButton.removeAttr("disabled");
+        submitButton.removeClass('disabled');
+        submitButton.attr("value", "Test mijn website");
       }, 3000);
     });
 
