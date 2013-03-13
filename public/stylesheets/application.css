@@ -175,3 +175,12 @@ iframe {
   height: 280px;
   overflow: hidden;
   width: 100%; }
+
+footer {
+  color: #b5b5b5;
+  font-family: "SkolarWeb-Italic";
+  font-size: 20px;
+  padding: 20px 0;
+  text-align: center; }
+  footer a {
+    color: #b5b5b5; }
