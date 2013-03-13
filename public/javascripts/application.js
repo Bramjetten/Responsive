@@ -1,10 +1,14 @@
 jQuery(document).ready(function() {
 
   $('form#form').submit(function(e) {
+    var loadingImage = $('.loading-image');
     var submitButton = $(this).find('input[type="submit"]')
     submitButton.attr("disabled", "disabled");
     submitButton.addClass('disabled');
-    submitButton.attr("value", "Testen...")
+    submitButton.attr("value", "Testen...");
+    loadingImage.removeClass('fadeOutUp');
+    loadingImage.addClass('fadeInDown');
+    loadingImage.css({opacity: 1});
 
     $('#smartphone, #tablet, #pc').animate({
       opacity: 0
@@ -32,6 +36,8 @@ jQuery(document).ready(function() {
         submitButton.removeAttr("disabled");
         submitButton.removeClass('disabled');
         submitButton.attr("value", "Test mijn website");
+        loadingImage.removeClass('fadeInDown');
+        loadingImage.addClass('fadeOutUp');
       }, 4000);
     });
 

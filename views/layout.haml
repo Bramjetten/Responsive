@@ -8,6 +8,9 @@
     %link{href:"http://fnt.webink.com/wfs/webink.css/?project=702B6DFC-9B50-492C-85CC-8E1337BDF75F&fonts=32A3E230-3101-A662-F6D5-D8B9D0A38A5B:f=Aller-Regular,4F449915-A3A8-CF9A-BB23-D64A3A9C1A7A:f=SkolarWeb-Italic,2793B463-660E-EB93-33EC-F2840A3A15BF:f=SkolarWeb-BoldItalic,A504D07C-783E-0F85-8B38-EFB57612CD7B:f=AllerDisplay-Regular,981E007E-BE6B-4E01-68D4-E6BFF0CC4139:f=SkolarBasicLt-Italic", rel:"stylesheet"}
     %link{href: '/stylesheets/application.css', rel: 'stylesheet'}
 
+    /[if lt IE 9]
+      %script{src: "//html5shiv.googlecode.com/svn/trunk/html5.js"}
+
   %body
     %header#header
       .container
@@ -23,6 +26,9 @@
           %form#form
             %input{type: 'text', placeholder: 'Bijv: denkgroot.com'}
             %input{type: 'submit', value: 'Test mijn website', data: {icon: 'r'}}
+
+          .loading-image.animated.padding
+            %img{src: '/images/loading.gif'}
 
     %section#result
       %section.weetje.animated Wist je dat het aantal tabletgebruikers in 2012<br />meer dan verdubbeld is?
