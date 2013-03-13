@@ -1,0 +1,15 @@
+server {
+  listen 80;
+  server_name www.benjijresponsive.nl;
+  root <%= current_path %>/public;
+  passenger_enabled on;
+  passenger_min_instances 1;
+}
+
+server {
+  listen 80;
+  server_name benjijresponsive.nl;
+  rewrite ^/(.*) http://www.benjijresponsive.nl1;
+}
+
+passenger_pre_start http://www.benjijresponsive.nl;
