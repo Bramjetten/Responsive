@@ -15,7 +15,7 @@ set :use_sudo, false
 
 set :scm, :git
 set :scm_passphrase, "v6g6IPwarI"
-set :repository,  "git@github.com:Bramjetten/responsive.git"
+set :repository,  "git@github.com:Bramjetten/Responsive.git"
 set :branch, "master"
 
 set :deploy_to, "/home/#{user}/apps/#{application}"
