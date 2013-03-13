@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
         submitButton.removeAttr("disabled");
         submitButton.removeClass('disabled');
         submitButton.attr("value", "Test mijn website");
-      }, 3000);
+      }, 4000);
     });
 
     e.preventDefault();
