@@ -29,6 +29,24 @@ body {
   background-image: -ms-linear-gradient(top, #01a388, #027764);
   background-image: -o-linear-gradient(top, #01a388, #027764);
   background-image: linear-gradient(top, #01a388, #027764); }
+  #header #logo {
+    color: #054339;
+    float: right;
+    font-family: "SkolarWeb-Italic";
+    line-height: 42px;
+    position: absolute;
+    right: 20px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #0eccad;
+    top: 20px;
+    -webkit-transition: color 0.4s ease;
+    -moz-transition: color 0.4s ease;
+    -ms-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+    transition: color 0.4s ease; }
+    #header #logo img {
+      margin-left: 4px;
+      vertical-align: middle; }
   #header h1 {
     color: white;
     font-family: "AllerDisplay-Regular";
