@@ -33,10 +33,7 @@ jQuery(document).ready(function() {
 
       if(regex.test(url)){
         $('iframe').attr("src", url);
-
-        $.get("/", {
-          data: {url: url}
-        })
+        $.post("/log", { url: url });
       }
 
       setTimeout(function() {
