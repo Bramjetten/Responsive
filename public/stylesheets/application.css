@@ -141,6 +141,10 @@ body {
   width: 14.70196%; }
   #smartphone:last-child {
     margin-right: 0; }
+  #smartphone .frame {
+    height: 300px; }
+  #smartphone iframe {
+    height: 600px; }
 
 #tablet {
   max-width: 320px;
@@ -150,6 +154,10 @@ body {
   width: 31.76157%; }
   #tablet:last-child {
     margin-right: 0; }
+  #tablet .frame {
+    height: 480px; }
+  #tablet iframe {
+    height: 960px; }
 
 #pc {
   display: block;
@@ -167,6 +175,13 @@ body {
     width: 100%; }
     #smartphone:last-child, #tablet:last-child, #pc:last-child {
       margin-right: 0; } }
+#smartphone i, #tablet i, #pc i {
+  color: #606060;
+  display: block;
+  font-size: 32px;
+  text-align: center; }
+#smartphone i:before, #tablet i:before, #pc i:before {
+  margin: 0; }
 
 iframe {
   background: white;
@@ -221,3 +236,14 @@ footer {
   text-align: center; }
   footer a {
     color: #b5b5b5; }
+
+[data-icon]:before {
+  content: attr(data-icon);
+  display: inline-block;
+  font-family: "Pictos Custom";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 150%;
+  margin-right: 12px;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased; }

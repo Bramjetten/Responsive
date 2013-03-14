@@ -133,9 +133,21 @@ body
   max-width: 240px
   @include span-columns(2)
 
+  .frame
+    height: 300px
+
+  iframe
+    height: 600px
+
 #tablet
   max-width: 320px
   @include span-columns(4)
+
+  .frame
+    height: 480px
+
+  iframe
+    height: 960px
 
 #pc
   @include span-columns(6)
@@ -143,6 +155,15 @@ body
 #smartphone, #tablet, #pc
   @include media($tablet)
     @include span-columns(8)
+
+  i
+    color: #606060
+    display: block
+    font-size: 32px
+    text-align: center
+
+  i:before
+    margin: 0
 
 iframe
   background: #fff
@@ -187,3 +208,14 @@ footer
 
   a
     color: #b5b5b5
+
+[data-icon]:before
+  content: attr(data-icon)
+  display: inline-block
+  font-family: "Pictos Custom"
+  font-weight: normal
+  font-style: normal
+  font-size: 150%
+  margin-right: 12px
+  vertical-align: middle
+  -webkit-font-smoothing: antialiased
