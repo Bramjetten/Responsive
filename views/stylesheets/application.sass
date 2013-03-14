@@ -112,11 +112,14 @@ body
 
   h2
     color: #606060
+    display: inline-block
     font-family: "AllerDisplay-Regular"
-    font-size: 18px
+    font-size: 16px
     font-weight: normal
     text-align: center
     text-transform: uppercase
+    width: 100%
+    @include transition(color .2s ease)
 
   .weetje
     color: #eee
@@ -133,8 +136,9 @@ body
   max-width: 240px
   @include span-columns(2)
 
-  .frame
+  .frame, .overlay
     height: 300px
+    line-height: 300px
 
   iframe
     height: 600px
@@ -143,8 +147,9 @@ body
   max-width: 320px
   @include span-columns(4)
 
-  .frame
+  .frame, .overlay
     height: 480px
+    line-height: 480px
 
   iframe
     height: 960px
@@ -156,14 +161,9 @@ body
   @include media($tablet)
     @include span-columns(8)
 
-  i
-    color: #606060
-    display: block
-    font-size: 32px
-    text-align: center
-
-  i:before
-    margin: 0
+  &:hover
+    h2
+      color: #01a388
 
 iframe
   background: #fff
@@ -211,11 +211,12 @@ footer
 
 [data-icon]:before
   content: attr(data-icon)
-  display: inline-block
+  display: inline
   font-family: "Pictos Custom"
   font-weight: normal
   font-style: normal
-  font-size: 150%
+  font-size: 32px
   margin-right: 12px
+  padding: 0 4px
   vertical-align: middle
   -webkit-font-smoothing: antialiased

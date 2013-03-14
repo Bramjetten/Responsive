@@ -117,11 +117,18 @@ body {
   position: relative; }
   #result h2 {
     color: #606060;
+    display: inline-block;
     font-family: "AllerDisplay-Regular";
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
     text-align: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -ms-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease; }
   #result .weetje {
     color: #eeeeee;
     font-family: "SkolarWeb-Italic";
@@ -141,8 +148,9 @@ body {
   width: 14.70196%; }
   #smartphone:last-child {
     margin-right: 0; }
-  #smartphone .frame {
-    height: 300px; }
+  #smartphone .frame, #smartphone .overlay {
+    height: 300px;
+    line-height: 300px; }
   #smartphone iframe {
     height: 600px; }
 
@@ -154,8 +162,9 @@ body {
   width: 31.76157%; }
   #tablet:last-child {
     margin-right: 0; }
-  #tablet .frame {
-    height: 480px; }
+  #tablet .frame, #tablet .overlay {
+    height: 480px;
+    line-height: 480px; }
   #tablet iframe {
     height: 960px; }
 
@@ -175,13 +184,8 @@ body {
     width: 100%; }
     #smartphone:last-child, #tablet:last-child, #pc:last-child {
       margin-right: 0; } }
-#smartphone i, #tablet i, #pc i {
-  color: #606060;
-  display: block;
-  font-size: 32px;
-  text-align: center; }
-#smartphone i:before, #tablet i:before, #pc i:before {
-  margin: 0; }
+#smartphone:hover h2, #tablet:hover h2, #pc:hover h2 {
+  color: #01a388; }
 
 iframe {
   background: white;
@@ -239,11 +243,12 @@ footer {
 
 [data-icon]:before {
   content: attr(data-icon);
-  display: inline-block;
+  display: inline;
   font-family: "Pictos Custom";
   font-weight: normal;
   font-style: normal;
-  font-size: 150%;
+  font-size: 32px;
   margin-right: 12px;
+  padding: 0 4px;
   vertical-align: middle;
   -webkit-font-smoothing: antialiased; }
