@@ -125,7 +125,7 @@ body
     opacity: 0
     position: absolute
     text-align: center
-    top: 40%
+    top: 20%
     width: 100%
     z-index: 1
 
@@ -147,15 +147,35 @@ body
 iframe
   background: #fff
   border: none
-  height: 560px
+  height: 1120px
+  overflow: hidden
   width: 200%
   @include transform(scale(.5))
   @include transform-origin(0 0)
 
 .frame
-  height: 280px
+  height: 560px
   overflow: hidden
+  position: relative
   width: 100%
+
+.overlay
+  background: rgba(1, 163, 136, .75)
+  color: #fff
+  display: block
+  font-family: "SkolarWeb-BoldItalic"
+  font-size: 20px
+  height: 100%
+  line-height: 560px
+  opacity: 0
+  position: absolute
+  text-align: center
+  width: 100%
+  z-index: 9
+  @include transition(all .2s ease)
+
+.overlay:hover
+  opacity: 1
 
 // Footer
 footer

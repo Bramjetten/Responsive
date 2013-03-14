@@ -2,18 +2,24 @@
   .padding.result-container
     #smartphone
       %h2 Smartphone
-
+      
       .frame
-        %iframe{src: 'http://www.denkgroot.com', sandbox: "allow-forms allow-scripts"}
+        .overlay
+          320px
+        %iframe{src: 'http://www.denkgroot.com', sandbox: "allow-forms allow-scripts", scrolling: "no"}
 
     #tablet
       %h2 Tablet
 
       .frame
-        %iframe{src: 'http://www.denkgroot.com', sandbox: "allow-forms allow-scripts"}
+        .overlay
+          640px
+        %iframe{src: 'http://www.denkgroot.com', sandbox: "allow-forms allow-scripts", scrolling: "no"}
 
     #pc
       %h2 PC
 
       .frame
-        %iframe{src: 'http://www.denkgroot.com', sandbox: "allow-forms allow-scripts"}
+        .overlay
+          1024px
+        %iframe{src: 'http://www.denkgroot.com', sandbox: "allow-forms allow-scripts", scrolling: "no"}
