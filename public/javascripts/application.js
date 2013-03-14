@@ -1,5 +1,8 @@
 jQuery(document).ready(function() {
 
+  var weetjes = ["Wist je dat het aantal tabletgebruikers in 2012<br />meer dan verdubbeld is?",
+                "Zes op de tien internetters gebruiken<br /> smartphones om te internetten."];
+
   $('form#form').submit(function(e) {
     var loadingImage = $('.loading-image');
     var submitButton = $(this).find('input[type="submit"]')
@@ -42,6 +45,6 @@ jQuery(document).ready(function() {
     });
 
     e.preventDefault();
-  })
+  });
 
 });
