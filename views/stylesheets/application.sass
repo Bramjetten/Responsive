@@ -195,8 +195,10 @@ iframe
   z-index: 9
   @include transition(all .2s ease)
 
-.overlay:hover
-  opacity: 1
+#smartphone, #tablet, #pc
+  &:hover
+    .overlay
+      opacity: 1
 
 // Footer
 footer

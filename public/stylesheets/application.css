@@ -229,7 +229,7 @@ iframe {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
 
-.overlay:hover {
+#smartphone:hover .overlay, #tablet:hover .overlay, #pc:hover .overlay {
   opacity: 1; }
 
 footer {
