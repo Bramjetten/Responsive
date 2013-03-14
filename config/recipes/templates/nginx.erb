@@ -6,4 +6,10 @@ server {
   passenger_min_instances 1;
 }
 
+server {
+  listen 80;
+  server_name denkmobiel.nl;
+  rewrite ^/(.*) http://www.denkmobiel.nl/$1;
+}
+
 passenger_pre_start http://www.denkmobiel.nl;
