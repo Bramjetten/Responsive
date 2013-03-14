@@ -17,7 +17,7 @@ jQuery(document).ready(function() {
 
     $('.weetje').html(weetjes[Math.floor(Math.random()*weetjes.length)]);
 
-    $('#smartphone, #tablet, #pc').animate({
+    $('.result-container').animate({
       opacity: 0
     }, 400, function() {
       $('.weetje').removeClass('bounceOutLeft');
@@ -33,13 +33,17 @@ jQuery(document).ready(function() {
 
       if(regex.test(url)){
         $('iframe').attr("src", url);
+
+        $.get("/", {
+          data: {url: url}
+        })
       }
 
       setTimeout(function() {
         $('.weetje').removeClass('bounceInRight');
         $('.weetje').addClass('bounceOutLeft');
         setTimeout(function() {
-          $('#smartphone, #tablet, #pc').animate({
+          $('.result-container').animate({
             opacity: 1
           }, 400);
         }, 400);

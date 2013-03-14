@@ -6,7 +6,7 @@
       .frame
         .overlay
           320px
-        %iframe{src: 'http://www.denkgroot.com', sandbox: "allow-forms allow-scripts", scrolling: "no"}
+        %iframe{src: @website, sandbox: "allow-forms allow-scripts", scrolling: "no"}
 
     #tablet
       %h2{data: {icon: 'T'}} Tablet
@@ -14,7 +14,7 @@
       .frame
         .overlay
           640px
-        %iframe{src: 'http://www.denkgroot.com', sandbox: "allow-forms allow-scripts", scrolling: "no"}
+        %iframe{src: @website, sandbox: "allow-forms allow-scripts", scrolling: "no"}
 
     #pc
       %h2{data: {icon: 'P'}} PC
@@ -22,4 +22,4 @@
       .frame
         .overlay
           1024px
-        %iframe{src: 'http://www.denkgroot.com', sandbox: "allow-forms allow-scripts", scrolling: "no"}
+        %iframe{src: @website, sandbox: "allow-forms allow-scripts", scrolling: "no"}

@@ -13,5 +13,11 @@ set :haml, { format: :html5 }
 
 # Application routes
 get '/' do
+  url = params[:url]
+  if params[:url] && !params[:url].match(/^http:\/\//)
+    url = "http://" + url
+  end
+
+  @website = url || "http://www.denkgroot.com"
   haml :index
 end

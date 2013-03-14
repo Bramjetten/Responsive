@@ -24,8 +24,8 @@
             *Wat is responsive?
             %a{href: '#'} Lees hier meer over hoe je beter zichtbaar kunt zijn
 
-          %form#form
-            %input{type: 'text', placeholder: 'Bijv: denkgroot.com'}
+          %form#form{method: :get}
+            %input{type: 'text', name: :url, placeholder: 'Bijv: denkgroot.com'}
             %input{type: 'submit', value: 'Test mijn website', data: {icon: 'r'}}
 
           .loading-image.animated.padding
