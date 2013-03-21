@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
     loadingImage.addClass('fadeInDown');
     loadingImage.css({opacity: 1});
 
-    $('.weetje').html(weetjes[Math.floor(Math.random()*weetjes.length)]);
+    $('.weetje span').html(weetjes[Math.floor(Math.random()*weetjes.length)]);
 
     $('.result-container').animate({
       opacity: 0

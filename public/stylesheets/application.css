@@ -139,6 +139,9 @@ body {
     top: 20%;
     width: 100%;
     z-index: 1; }
+    #result .weetje img {
+      display: block;
+      margin: 40px auto 0; }
 
 #smartphone {
   max-width: 240px;
