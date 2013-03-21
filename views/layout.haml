@@ -22,7 +22,7 @@
           %h1 Is jouw website geschikt voor<br /> mobiel en tablet?
           %small
             *Wat is responsive?
-            %a{href: '#'} Lees hier meer over hoe je beter zichtbaar kunt zijn
+            %a{href: 'http://www.denkgroot.com'} Lees hier meer over hoe je beter zichtbaar kunt zijn
 
           %form#form{method: :get}
             %input{type: 'text', name: :url, placeholder: 'Bijv: denkgroot.com'}
@@ -39,7 +39,7 @@
       .container
         .padding
           Niet mobiel geschikt?
-          %a{href: 'http://www.denkgroot.com', target: '_blank'} Wij kunnen helpen!
+          %a.conversion-button{href: 'http://www.denkgroot.com', target: '_blank'} Wij kunnen helpen!
 
     %script{src: '/javascripts/jquery.min.js'}
     %script{src: '/javascripts/application.js'}
