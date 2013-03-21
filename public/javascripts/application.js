@@ -33,6 +33,9 @@ jQuery(document).ready(function() {
 
       if(regex.test(url)){
         $('iframe').attr("src", url);
+        $.post('/log', {
+          url: url
+        })
       }
 
       setTimeout(function() {

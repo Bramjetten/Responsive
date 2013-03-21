@@ -21,3 +21,11 @@ get '/' do
 
   haml :index
 end
+
+post '/log' do
+  url = params[:url]
+
+  File.open('logs/urls.log', 'a') do |file|
+    file << url + "\n"
+  end
+end
