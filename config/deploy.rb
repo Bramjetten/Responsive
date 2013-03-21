@@ -47,6 +47,7 @@ namespace :deploy do
       mkdir -p #{latest_release}/public &&
       mkdir -p #{latest_release}/tmp &&
       ln -s #{shared_path}/log #{latest_release}/log
+      ln -s #{shared_path}/logs #{latest_release}/logs
     CMD
 
     if fetch(:normalize_asset_timestamps, true)
