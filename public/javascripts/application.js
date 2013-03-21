@@ -1,5 +1,9 @@
 jQuery(document).ready(function() {
 
+  $('#uitleg_trigger').click(function() {
+    $('#uitleg').slideToggle();
+  });
+
   var weetjes = ["Wist je dat het aantal tabletgebruikers in 2012<br />meer dan verdubbeld is?",
                 "Zes op de tien internetters gebruiken<br /> smartphones om te internetten.",
                 "In 2012 ging 86% van de jongeren<br /> regelmatig mobiel online.",

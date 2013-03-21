@@ -21,9 +21,19 @@
             %img{src: '/images/logo.png'}
           %h1 Is jouw website geschikt voor<br /> mobiel en tablet?
           %small
-            *Wat is responsive?
-            %a{href: 'http://www.denkgroot.com'} Lees hier meer over hoe je beter zichtbaar kunt zijn
+            *
+            %a#uitleg_trigger{href: '#'} Hoe zie ik of mijn website geschikt is?
 
+      #uitleg
+        .container
+          .padding
+            %img{src: '/images/voorbeeld.png'}
+            .uitleg
+              %h2 Responsive design
+              %p Responsive design is een methode om sites op verschillende groottes weer te geven. Daarbij worden tekst en afbeeldingen automatisch geschaald. Dankzij responsive design hoeft maar één website onderhouden te worden die overal werkt.
+
+      .container
+        .padding
           %form#form{method: :get}
             %input{type: 'text', name: :url, placeholder: 'Bijv: denkgroot.com'}
             %input{type: 'submit', value: 'Test mijn website', data: {icon: 'r'}}
