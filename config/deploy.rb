@@ -9,6 +9,7 @@ set :port, 48392
 set :application, "responsive"
 
 default_run_options[:pty] = true
+set :ssh_options, { forward_agent: true }
 
 set :user, "deployer"
 set :use_sudo, false
